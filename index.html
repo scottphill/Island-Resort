@@ -1,0 +1,24 @@
+<?php
+    require "header.php";
+?>
+<div class = "back">
+    <main>
+      <div class="wrapper-main">
+        <section class="section-default">
+            <?php
+                //display logged out when logged out
+                if(!isset($_SESSION['user'])) {
+                    echo '<p class="login-status">You are logged out!</p>';
+                }
+                //display logged in when logged in
+                else if(isset($_SESSION['user'])){
+                    echo '<p class="login-status">You are logged in!</p>';
+                }
+            ?>
+        </section>
+      </div>
+    </main>
+</div>
+<?php
+    require "footer.php";
+?>
